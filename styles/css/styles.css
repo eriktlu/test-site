@@ -1,0 +1,179 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.brand-color {
+    color: #fd1c15;
+}
+
+.brand-bg-color {
+    background-color: #fd1c15;
+}
+
+/* Button */
+
+button {
+    outline: none;
+    border: none;
+    transition: 0.15s ease-in-out;
+}
+
+header button {
+    background-color: #fff;
+    color: #fd1c15;
+    font-weight: bold;
+}
+
+header .brand-color:hover {
+    color: #bb0702;
+}
+
+header .brand-color:hover img {
+    filter: invert(10%) sepia(88%) saturate(6512%) hue-rotate(13deg) brightness(88%) contrast(110%)
+}
+
+.main-button-link {
+    background-color: #fd1c15;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin-bottom: 2rem;
+    border-radius: 2px;
+}
+
+.main-button-link:hover {
+    background-color: #bb0702;
+    color: #fff;
+}
+
+
+/* Header */
+
+.navbar {
+    box-shadow: 0 0 5px grey;
+}
+
+.navbar-toggler {
+    outline: none!important;
+    border: none!important;
+    box-shadow: none!important;
+}
+
+.navbar-start {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-start .navbar-brand {
+    padding: 0;
+    margin-left: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-end {
+    display: flex;
+}
+
+.navbar-end .navbar-link {
+    display: flex;
+    margin-right: 2rem;
+}
+
+.navbar-end .navbar-link img {
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+
+.navbar-toggler-icon {
+    filter: invert(42%) sepia(95%) saturate(5296%) hue-rotate(346deg) brightness(92%) contrast(117%)!important;
+}
+
+.btn-close {
+    filter: invert(42%) sepia(95%) saturate(5296%) hue-rotate(346deg) brightness(92%) contrast(117%)!important;
+}
+
+.navbar-link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.offcanvas-title {
+    color: #fd1c15;
+    font-weight: bold;
+}
+
+/* Main */
+
+main {
+    padding-top: 56px;
+    margin-bottom: 5rem;
+}
+
+/* Main -> Title */
+
+.main-title {
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.main-title a {
+    margin: 0 auto;
+}
+
+.main-title h1 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.lead-text {
+    margin: 2rem 0;
+}
+
+
+/* Main -> Carousel */
+
+.carousel {
+    margin-bottom: 8rem;
+}
+
+.carousel-item img {  
+    height: 500px;
+    object-fit: cover;
+}
+
+
+/* Main -> Contact */
+
+.contact-us h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.contact-us h5 {
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.contact-us iframe {
+    width: 100%;
+    margin: 3rem 0;
+}
+
+.contact-us .contact-information {
+    display: flex;
+}
+
+.contact-us .contact-information > div {
+    width: 50%;
+}
+
+.contact-information-start button {
+    margin-bottom: 2rem;
+}
+
+.contact-information-end p {
+    margin-bottom: .35rem;
+}
