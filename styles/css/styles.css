@@ -1,26 +1,29 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .brand-color {
-    color: #fd1c15;
+    color: #eb1429;
 }
 
 .brand-bg-color {
-    background-color: #fd1c15;
+    background-color: #eb1429;
 }
 
 /* Button */
 
-button {
+a {
     outline: none;
     border: none;
     transition: 0.15s ease-in-out;
 }
 
-header button {
+header a {
     background-color: #fff;
-    color: #fd1c15;
+    color: #eb1429;
     font-weight: bold;
 }
 
@@ -33,14 +36,14 @@ header .brand-color:hover img {
 }
 
 .main-button-link {
-    background-color: #fd1c15;
+    background-color: #eb1429;
     color: #fff;
     padding: 1rem 2rem;
     text-decoration: none;
     display: block;
     width: fit-content;
-    margin-bottom: 2rem;
-    border-radius: 2px;
+    margin: 0 0 1rem;
+    border-radius: 5px;
 }
 
 .main-button-link:hover {
@@ -48,8 +51,30 @@ header .brand-color:hover img {
     color: #fff;
 }
 
+@media (min-width: 768px) {
+    .main-button-link {
+        margin: 0 0 2rem;
+    }
+}
 
 /* Header */
+
+.navbar-end {
+    display: none;
+}
+
+.navbar-start {
+    width: 100%;
+}
+
+.navbar-start .navbar-brand {
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Titan One', cursive;
+}
 
 .navbar {
     box-shadow: 0 0 5px grey;
@@ -64,17 +89,6 @@ header .brand-color:hover img {
 .navbar-start {
     display: flex;
     align-items: center;
-}
-
-.navbar-start .navbar-brand {
-    padding: 0;
-    margin-left: 1.8rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.navbar-end {
-    display: flex;
 }
 
 .navbar-end .navbar-link {
@@ -101,21 +115,54 @@ header .brand-color:hover img {
 }
 
 .offcanvas-title {
-    color: #fd1c15;
-    font-weight: bold;
+    color: #eb1429;
+    font-family: 'Titan One', cursive;
+}
+
+@media (min-width: 768px) {
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-end {
+        display: flex;
+    }
+
+    .navbar-start .navbar-brand {
+        margin: 0;
+    }
+
+    .navbar-start {
+        width: auto;
+    }
+
+    .navbar {
+        animation: .3s ease-out 0s 1 slideInFromTop;
+    }
 }
 
 /* Main */
 
 main {
-    padding-top: 56px;
+    padding-top: 54px;
     margin-bottom: 5rem;
+}
+
+.first-look {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+    .first-look {
+        flex-direction: column;
+    }
 }
 
 /* Main -> Title */
 
 .main-title {
-    margin: 5rem 0;
+    margin: 2rem 0 3rem;
     text-align: center;
 }
 
@@ -125,23 +172,48 @@ main {
 
 .main-title h1 {
     margin: 0;
-    font-weight: bold;
+    font-family: 'Titan One', cursive;
 }
 
 .lead-text {
     margin: 2rem 0;
 }
 
+@media (min-width: 768px) {
+    .main-title {
+        margin: 5rem 0;
+        /* transition: transform 1s, opacity 1s; */
+        animation: 1s ease-out 0s 1 slideInFromLeft;
+    }
+
+    /* .main-title.active {
+        transform: translateX(-100%);
+    } */
+}
+
 
 /* Main -> Carousel */
 
-.carousel {
-    margin-bottom: 8rem;
+.carousel-item img {  
+    height: 200px;
+    object-fit: cover;
 }
 
-.carousel-item img {  
-    height: 500px;
-    object-fit: cover;
+@media (max-width: 767.98px) {
+    .carousel .container {
+        padding: 0!important;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel {
+        margin-bottom: 3rem;
+        animation: 1s ease-out 0s 1 slideInFromRight;
+    }
+
+    .carousel-item img {  
+        height: 500px;
+    }
 }
 
 
@@ -149,25 +221,27 @@ main {
 
 .contact-us h3 {
     text-align: center;
-    font-weight: bold;
 }
 
 .contact-us h5 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: bold;
 }
 
 .contact-us iframe {
     width: 100%;
-    margin: 3rem 0;
+    margin: 1.5rem 0 2rem;
+    height: 200px;
 }
 
 .contact-us .contact-information {
     display: flex;
+    flex-direction: column;
 }
 
 .contact-us .contact-information > div {
-    width: 50%;
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
 .contact-information-start button {
@@ -176,4 +250,138 @@ main {
 
 .contact-information-end p {
     margin-bottom: .35rem;
+}
+
+table th {
+    font-weight: normal;
+}
+
+table td {
+    padding: 0 .5rem;
+}
+
+@media (min-width: 768px) {
+    .contact-us h3 {
+        font-weight: bold;
+    }
+
+    .contact-us iframe {
+        width: 100%;
+        margin: 3rem 0;
+        height: 450px;
+    }
+
+    .contact-us .contact-information {
+        flex-direction: row;
+    }
+    
+    .contact-us .contact-information > div {
+        width: 50%;
+    }
+
+    .contact-us h5 {
+        margin-bottom: 2rem;
+        font-weight: bold;
+    }
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    height: 56px;
+    background-color: #fff;
+    box-shadow: 0 0 5px grey;
+}
+
+footer .container {
+    height: 100%;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.footer-links a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #eb1429;
+}
+
+.footer-links img {
+    width: 1.3rem;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    footer {
+        display: none;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .animate {
+        transition: 1s ease-out;
+    }
+
+    .contact-header {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    .contact-us iframe {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    
+    .contact-information {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    .animate.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
