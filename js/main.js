@@ -1,23 +1,42 @@
-function scrollTrigger(selector) {
+function scrollTrigger(selector, options = {}) {
     let els = document.querySelectorAll(selector)
     els = Array.from(els)
     els.forEach(el => {
-        addObserver(el)
+        addObserver(el, options)
     })
 }
 
-function addObserver(el){
+function addObserver(el, options){
+    if(!('IntersectionObserver' in window)) {
+        if(options.cb){
+            options.cb(el)
+        } else{
+            entry.target.classList.add('active')
+        }
+        return
+    }
     let observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
-                entry.target.classList.add('active')
+                if(options.cb) {
+                    options.cb(el)
+                } else {
+                    entry.target.classList.add('active')
+                }
+                
                 observer.unobserve(entry.target)
             }
         })
-    })
+    }, options)
     observer.observe(el)
 }
 
-scrollTrigger('.contact-us h3')
-scrollTrigger('.contact-us iframe')
-scrollTrigger('.contact-information')
+scrollTrigger('.contact-us h3', {
+    rootMargin: '-100px',
+})
+scrollTrigger('.contact-us iframe', {
+    rootMargin: '-100px',
+})
+scrollTrigger('.contact-information', {
+    rootMargin: '-100px',
+})
