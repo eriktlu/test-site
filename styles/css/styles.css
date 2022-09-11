@@ -44,11 +44,12 @@ header .brand-color:hover img {
     width: fit-content;
     margin: 0 0 1rem;
     border-radius: 5px;
+    border: 2px solid #eb1429;
 }
 
 .main-button-link:hover {
-    background-color: #bb0702;
-    color: #fff;
+    background-color: #fff;
+    color: #eb1429;
 }
 
 @media (min-width: 768px) {
