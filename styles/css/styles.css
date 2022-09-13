@@ -18,7 +18,7 @@ body {
 a {
     outline: none;
     border: none;
-    transition: 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out;
 }
 
 header a {
@@ -365,7 +365,7 @@ footer .container {
 
 @media (min-width: 768px) {
     .animate {
-        transition: 1s ease-out;
+        transition: translate 1s ease-out, opacity 1s ease-out;
     }
 
     .contact-header {
