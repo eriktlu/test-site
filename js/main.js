@@ -31,12 +31,12 @@ function addObserver(el, options){
     observer.observe(el)
 }
 
-scrollTrigger('.contact-us h3', {
-    rootMargin: '-100px',
-})
-scrollTrigger('.contact-us iframe', {
-    rootMargin: '-100px',
-})
-scrollTrigger('.contact-information', {
-    rootMargin: '-100px',
-})
+// scrollTrigger('.contact-us h3', {
+//     rootMargin: '-100px',
+// })
+// scrollTrigger('.contact-us iframe', {
+//     rootMargin: '-100px',
+// })
+// scrollTrigger('.contact-information', {
+//     rootMargin: '-100px',
+// })
