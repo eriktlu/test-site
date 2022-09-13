@@ -165,8 +165,12 @@ main {
 
 /* Main -> Title */
 
+.test {
+    margin: 5rem 0;
+}
+
 .main-title {
-    margin: 2rem 0 3rem;
+    /* margin: 2rem 0 3rem; */
     text-align: center;
 }
 
@@ -184,11 +188,11 @@ main {
 }
 
 @media (min-width: 768px) {
-    .main-title {
+    /* .main-title {
         margin: 5rem 0;
-        /* transition: transform 1s, opacity 1s; */
-        /* animation: 1s ease-out 0s 1 slideInFromLeft; */
-    }
+        transition: transform 1s, opacity 1s; */
+        /* animation: 1s ease-out 0s 1 slideInFromLeft;
+    } */
 
     /* .main-title.active {
         transform: translateX(-100%);
