@@ -364,11 +364,11 @@ footer .container {
 }
 
 @media (min-width: 768px) {
-    .animate {
+    /* .animate {
         transition: translate 1s ease-out, opacity 1s ease-out;
-    }
+    } */
 
-    .contact-header {
+    /* .contact-header {
         transform: translateX(-100%);
         opacity: 0;
     }
@@ -386,5 +386,5 @@ footer .container {
     .animate.active {
         transform: translateX(0);
         opacity: 1;
-    }
+    } */
 }
