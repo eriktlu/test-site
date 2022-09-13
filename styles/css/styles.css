@@ -212,6 +212,7 @@ main {
 @media (min-width: 768px) {
     .carousel {
         margin-bottom: 3rem;
+        height: 500px;
         /* animation: 1s ease-out 0s 1 slideInFromRight; */
     }
 
